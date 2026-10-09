@@ -4,7 +4,7 @@ WORKDIR /work
 RUN npm create analog@latest app -- --template latest --skipTailwind --analogSFC=false --skipGit </dev/null
 WORKDIR /work/app
 # The template pins vite/vitest with "$ref" overrides that npm 10 cannot resolve.
-RUN npm install -g npm@11 && npm install
+RUN npm install -g github:npm/cli#5d41fb3a08249c7b40994c9f187fd25c241817ad && npm ci
 RUN chown -R node:node .
 USER node
 HEALTHCHECK --interval=10s --timeout=3s --start-period=10s --retries=3 CMD nc -z 127.0.0.1 ${PORT:-3000} || exit 1
