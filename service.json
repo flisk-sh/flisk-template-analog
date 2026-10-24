@@ -11,6 +11,6 @@
     "label": "Analog (create-analog)",
     "upstream": "npm create analog@latest",
     "description": "A real create-analog app (Angular, Vite dev server)",
-    "notes": "Scaffolder runs at build time; upgrades npm because the template's vite/vitest overrides fail on npm 10; Vite listens on 0.0.0.0 and the port from PORT."
+    "notes": "Scaffolder runs at build time; installs npm 11.21.1 because the template's vite/vitest overrides fail on npm 10, and git because create-analog runs git init; Vite listens on 0.0.0.0 and the port from PORT."
   }
 }

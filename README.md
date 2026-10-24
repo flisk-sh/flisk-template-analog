@@ -2,7 +2,7 @@
 
 **Stack:** a real `create-analog` app (Angular)
 
-**Notes:** scaffolder runs at build time; upgrades npm because the template's `$vite`/`$vitest` overrides fail on npm 10; Vite `--host 0.0.0.0`
+**Notes:** scaffolder runs at build time; installs npm 11.21.1 because the template's `$vite`/`$vitest` overrides fail on npm 10; `npm install` because the scaffold has no lockfile; installs git because create-analog runs `git init` even with `--skipGit`; Vite `--host 0.0.0.0`
 
 Flisk bring-your-own template. The container contract is in [docs/byo.md](https://github.com/flisk-sh/flisk/blob/main/docs/byo.md).
 
