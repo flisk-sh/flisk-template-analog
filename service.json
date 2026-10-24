@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "appName": "analog-app",
+  "appType": "bring-your-own",
+  "stack": "shop",
+  "port": 3000,
+  "healthCheckPath": "/",
+  "dockerfile": "./Dockerfile",
+  "template": {
+    "id": "analog",
+    "label": "Analog (create-analog)",
+    "upstream": "npm create analog@latest",
+    "description": "A real create-analog app (Angular, Vite dev server)",
+    "notes": "Scaffolder runs at build time; upgrades npm because the template's vite/vitest overrides fail on npm 10; Vite listens on 0.0.0.0 and the port from PORT."
+  }
+}
