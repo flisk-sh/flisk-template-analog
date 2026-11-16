@@ -6,6 +6,7 @@
   "port": 3000,
   "healthCheckPath": "/",
   "dockerfile": "./Dockerfile",
+  "webUi": true,
   "template": {
     "id": "analog",
     "label": "Analog (create-analog)",
