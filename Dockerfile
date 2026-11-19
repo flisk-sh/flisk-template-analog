@@ -3,7 +3,7 @@ FROM node:22-alpine@sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18
 # create-analog runs `git init` even with --skipGit.
 RUN apk add --no-cache git
 WORKDIR /work
-RUN npm create analog@latest app -- --template latest --skipTailwind --analogSFC=false --skipGit </dev/null
+RUN npm create analog@2.9.7 app -- --template latest --skipTailwind --analogSFC=false --skipGit </dev/null
 WORKDIR /work/app
 # The template pins vite/vitest with "$ref" overrides that npm 10 cannot resolve, so use a published npm 11.
 RUN npm install -g npm@11.21.1
