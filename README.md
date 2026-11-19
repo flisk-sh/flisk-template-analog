@@ -15,6 +15,8 @@ CI runs two checks on every pull request: `verify` builds the image, runs it wit
 docker build -t template . && docker run --rm -e PORT=4000 -p 4000:4000 template
 ```
 
+The Dockerfile pins the scaffolder at `npm create analog@2.9.7`. To bump it, check the current release with `npm view create-analog version`, update that one version and run the build above. CI rejects any `@latest` in the Dockerfile.
+
 ## Use it in a Flisk project
 
 This repo already includes a [`service.json`](service.json) that registers the resource as `analog-app`, so Flisk picks it up automatically when this folder is inside a Flisk project.
