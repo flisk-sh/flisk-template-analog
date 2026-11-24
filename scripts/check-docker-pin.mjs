@@ -3,7 +3,8 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export function findLatestTags(dockerfile) {
-  return [...dockerfile.matchAll(/@latest\b/g)].map((match) => match[0]);
+  const instructions = dockerfile.replace(/^[ \t]*#.*$/gm, '');
+  return [...instructions.matchAll(/@latest\b/g)].map((match) => match[0]);
 }
 
 const invokedDirectly = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
